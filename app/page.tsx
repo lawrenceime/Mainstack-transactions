@@ -1,14 +1,23 @@
 import Image from "next/image";
-import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
+
+import ChartBlock from "./components/ChartBlock";
+import TransactionBlock from "./components/TransactionBlock";
+
+
+
 
 export default function Home() {
   return (
     <>
     
-      <div className="w-screen h-screen bg-[#ffff] ">
-      <Navbar/>
-      <Sidebar/>
+      <div className=" bg-[#ffff] ">
+      <ChartBlock/>
+      <TransactionBlock/>
+  
+      
+  
+      
+     
 
       </div>
 

@@ -3,7 +3,7 @@ import SidebarContent from './SidebarContent'
 
 const Sidebar = () => {
   return (
-    <div className='flex justify-center items-center w-[48px] h-[182px] rounded-[100px] shadow-md mt-[10%] ml-[16px] gap-[8px]'>
+    <div className='fixed left-[16px] top-0  w-[48px] h-fit rounded-[100px] shadow-md mt-[12%] ml-[16px] gap-[8px]'>
     <SidebarContent/>
     </div>
   )
