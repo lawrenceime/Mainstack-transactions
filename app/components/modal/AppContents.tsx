@@ -7,6 +7,15 @@ interface AppDetails {
     description: string;
 }
 
+interface AppModalProps {
+    closeModal : () => void ;
+    appModalOpen : boolean;
+    
+
+}
+
+
+
 const appDetails : AppDetails[] = [
     {
         img : 'app-bar-list(3).svg',
@@ -41,11 +50,11 @@ const appDetails : AppDetails[] = [
     }
 ]
 
-const AppContents = () => {
+const AppContents:React.FC<{closeModal:()=> void}> = ({closeModal}) => {
   return (
     <div>{appDetails.map((item , index) => {
         return <div key={index}>
-            <Image src={item.img} alt='app bar list ' />
+            <Image src={item.img} width={20} height={20} alt='app bar list ' />
             <div>
                 <p>{item.title}</p>
                 <p>{item.description}</p>

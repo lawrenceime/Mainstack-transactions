@@ -1,4 +1,6 @@
-import React from 'react';
+'use client'
+
+import React,{useState} from 'react';
 import Image from 'next/image';
 import Logo from '../../public/assets/mainstack-logo.svg'
 import Home from '../../public/assets/home.svg'
@@ -10,8 +12,18 @@ import Notifications from '../../public/assets/notifications.svg'
 import Chat from '../../public/assets/chat.svg'
 import Avatar from '../../public/assets/avi.svg'
 import Menu from '../../public/assets/menu.svg'
+import AppModal from './modal/AppModal';
 
 const Navbar = () => {
+
+    const [appModalOpen , setAppModal] = useState(false)
+
+
+    const toggleModal = () => {
+        setAppModal(prevState => !prevState);
+    };
+
+
     return (
         <div className='bg-white fixed top-0 z-50 right-8  w-[95%] h-[64px] rounded-[100px] shadow-md  mx-auto flex items-center '>
 
@@ -35,8 +47,8 @@ const Navbar = () => {
                     <Image src={Contact} alt='home-icon' width={20} height={20} />
                     <p className=' text-[16px] font-semibold '>CRM</p>
                 </div>
-                <div className='flex gap-[4px]'>
-                    <Image src={Widget} alt='home-icon' width={20} height={20} />
+                <div className='flex gap-[4px]' onClick={toggleModal}>
+                    <Image src={Widget} alt='home-icon' width={20} height={20} className='cursor-pointer' />
                     <p className=' text-[16px] font-semibold '>Apps</p>
                 </div>
 
@@ -58,6 +70,8 @@ const Navbar = () => {
                 
 
             </div>
+
+            {appModalOpen&&<AppModal appModalOpen={appModalOpen} closeModal={toggleModal}/>}
 
 
 
