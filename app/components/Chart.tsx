@@ -19,25 +19,25 @@ const data: Data[] = [
   },
   {
     name: 'Page B',
-    uv: 3000,
+    uv: 6000,
     pv: 1398,
     amt: 2210,
   },
   {
     name: 'Page C',
-    uv: 2000,
+    uv: 3000,
     pv: 9800,
     amt: 2290,
   },
   {
     name: 'Page D',
-    uv: 2780,
+    uv: 5780,
     pv: 3908,
     amt: 2000,
   },
   {
     name: 'Page E',
-    uv: 1890,
+    uv: 2000,
     pv: 4800,
     amt: 2181,
   },
@@ -51,24 +51,31 @@ const data: Data[] = [
 
 const Chart: React.FC = () => {
   return (
-    <ResponsiveContainer height={400} >
+    <div>
+
+<ResponsiveContainer height={230} >
       <LineChart
       
         data={data}
         margin={{
-          top: 10,
+          top: 50,
           right: 30,
           left: 20,
           bottom: 5,
         }}
       >
         
-       
+       {/* < XAxis /> */}
+      
         
         <Line type="monotone" dataKey="uv" stroke="#FF5403" />
       </LineChart>
    
     </ResponsiveContainer>
+    <hr className='w-[100%] mt-[-50] border-[2px]'/>
+
+    </div>
+    
   );
 };
 
