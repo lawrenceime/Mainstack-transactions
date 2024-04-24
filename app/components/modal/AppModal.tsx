@@ -1,9 +1,19 @@
 import React from 'react'
 import AppContents from './AppContents'
 
-const AppModal = () => {
+
+interface AppModalProps {
+    closeModal : () => void ;
+    appModalOpen : boolean;
+    
+
+}
+
+const AppModal:React.FC<AppModalProps> = ({closeModal , appModalOpen}) => {
   return (
-    <div></div>
+    <div className='fixed inset-0'>
+     <AppContents closeModal={closeModal}/>
+    </div>
   )
 }
 
