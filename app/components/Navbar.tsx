@@ -13,7 +13,7 @@ import Menu from '../../public/assets/menu.svg'
 
 const Navbar = () => {
     return (
-        <div className='w-[95%] h-[64px] rounded-[100px] shadow-md mt-[16px] mx-auto flex items-center '>
+        <div className='bg-white fixed top-0 z-50 right-8  w-[95%] h-[64px] rounded-[100px] shadow-md  mx-auto flex items-center '>
 
             <Image src={Logo} alt='mainstack logo' className='w-[36px] h-[36px] ml-[24px]' />
             

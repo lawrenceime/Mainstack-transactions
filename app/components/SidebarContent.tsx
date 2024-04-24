@@ -1,5 +1,5 @@
 import React from 'react'
-import { Interface } from 'readline'
+
 
 interface ImageProps {
    img:string
