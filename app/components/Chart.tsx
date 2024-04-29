@@ -73,6 +73,10 @@ const Chart: React.FC = () => {
    
     </ResponsiveContainer>
     <hr className='w-[100%] mt-[-50] border-[2px]'/>
+    <div className='flex justify-between w-[100%] mt-[11px]'>
+      <p className='text-gray-400'>Apr 1, 2022</p>
+      <p className='text-gray-400'>Apr 30, 2022</p>
+    </div>
 
     </div>
     
